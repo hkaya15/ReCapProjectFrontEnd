@@ -1,0 +1,26 @@
+  
+<div class="row image-section">
+  <div *ngFor="let image of carImages" class="col-md-4 img-gallery">
+    <img
+      [src]="getImagePath(image.imagePath)"
+      class="img-fluid"
+      [alt]="getImagePath(image.imagePath)"
+    />
+  </div>
+</div>
+<ul *ngIf="carDtos" class="list-group list-group-flush">
+  <li class="list-group-item">Brand Name: {{ carDtos.brandName}}</li>
+  <li class="list-group-item">Color Name: {{ carDtos.colorName }}</li>
+  <li class="list-group-item">Model Year: {{ carDtos.modelYear }}</li>
+  <li class="list-group-item">Model Year: {{ carDtos.modelYear }}</li>
+  <li class="list-group-item">Daily Price: {{ carDtos.dailyPrice }}</li>
+  <li class="list-group-item">Car Id: {{ carDtos.carId }}</li>
+</ul>
+<div class="btn-goback">
+  <button routerLink="/cars" type="button" class="btn btn-xs btn-success">
+    Geri
+  </button>
+</div>
+
+
+<!-- <img src="https://localhost:44343/ImagesRepos/00480f5f-3dd7-4229-a01d-828d069883c6-2-27-2021.jpg"> -->
